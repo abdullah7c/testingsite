@@ -27,21 +27,14 @@ export async function getStaticProps(context) {
         const result = await excuteQuery({
           query: 'SELECT * FROM blogdata',
       })
-      
       const res = await JSON.stringify(result)
       data = await JSON.parse(res)
-
-  } catch ( error ) {
-      console.log( error );
-  }
+  } catch ( error ) { console.log( error );}
 
   
   if (!data) {
-    return {
-      notFound: true,
-    }
+    return { notFound: true,}
   }
-
   return {
     props: { data }, // will be passed to the page component as props
   }
