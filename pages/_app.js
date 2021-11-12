@@ -11,10 +11,11 @@ import Footer from '/components/shared/Footer';
 import React,{useState} from 'react';
 import Router from 'next/router'
 import { SSRProvider } from '@react-aria/ssr';
+import { SessionProvider } from "next-auth/react"
 function MyApp({ 
 
   Component,
-  pageProps
+  pageProps: { session, ...pageProps },
 
 }) {
   const [loading, setLoading] = useState(false)
@@ -28,6 +29,7 @@ function MyApp({
   })
 
   return(
+    <SessionProvider session={session}>
     <SSRProvider>
     <Header/>
     <div style={{marginTop:"55px"}}></div>
@@ -43,6 +45,7 @@ function MyApp({
           }
     
   </SSRProvider>
+  </SessionProvider>
   )
 }
 
