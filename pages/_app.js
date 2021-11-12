@@ -7,7 +7,6 @@ import Footer from '/components/shared/Footer';
 import React,{useState} from 'react';
 import Router from 'next/router'
 import { SSRProvider } from '@react-aria/ssr';
-<link rel="preload" rel="stylesheet" href="/pages/styles.css"/>
 function MyApp({ 
 
   Component,
