@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import excuteQuery from '../utils/db'
+import HomePage from '/components/HomePage'
 
 export default function Home({data}) {
-  console.log(data)
+  
   return (
     <div >
       <Head>
@@ -13,9 +13,8 @@ export default function Home({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>
-        Hello
-      </h1>
+      <HomePage data={data} />
+      
     </div>
   )
 }
@@ -27,9 +26,11 @@ export async function getStaticProps(context) {
     try {
         const result = await excuteQuery({
           query: 'SELECT * FROM blogdata',
-      });
-      data = JSON.stringify(result);
-      //console.log(result);
+      })
+      
+      const res = await JSON.stringify(result)
+      data = await JSON.parse(res)
+
   } catch ( error ) {
       console.log( error );
   }
