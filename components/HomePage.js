@@ -189,7 +189,7 @@ const Main = () => {
               
               <div className="mt-4 pt-4 client-name">ALISTER DSOUZA</div>
               <div className="client-position">Marketing Manager – Eventage.</div>
-              <FontAwesomeIcon className="mt-2 quote" icon={faQuoteLeft}/>
+              <FontAwesomeIcon  className="mt-2 quote" icon={faQuoteLeft}/>
           </Col>
         </Row>
       </Container>

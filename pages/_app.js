@@ -3,10 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '/styles/main.scss'
 import Header from '/components/shared/Header'
 import Loader from '/components/shared/Loader';
+import Footer from '/components/shared/Footer';
 import React,{useState} from 'react';
 import Router from 'next/router'
 import { SSRProvider } from '@react-aria/ssr';
-
+<link rel="preload" rel="stylesheet" href="/pages/styles.css"/>
 function MyApp({ 
 
   Component,
@@ -32,7 +33,10 @@ function MyApp({
               <Loader/>
           }
           { !loading && 
+            <>
             <Component {...pageProps} />
+            <Footer/>
+            </>
           }
     
   </SSRProvider>
