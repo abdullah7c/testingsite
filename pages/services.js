@@ -13,7 +13,7 @@ const services = ({servicesData}) => {
 export default services
 
 
-  export async function getInitialProps() {
+  export async function getStaticProps() {
       await new Promise((resolve, reject)=>{
           setTimeout(resolve, 1000)
       });
