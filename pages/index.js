@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import excuteQuery from '../utils/db'
 
-export default function Home() {
+export default function Home({data}) {
+  console.log(data)
   return (
     <div >
       <Head>
@@ -16,4 +18,30 @@ export default function Home() {
       </h1>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+
+  let data = []
+
+    try {
+        const result = await excuteQuery({
+          query: 'SELECT * FROM blogdata',
+      });
+      data = JSON.stringify(result);
+      //console.log(result);
+  } catch ( error ) {
+      console.log( error );
+  }
+
+  
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: { data }, // will be passed to the page component as props
+  }
 }
