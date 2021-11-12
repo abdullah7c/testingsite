@@ -1,14 +1,44 @@
 import React from 'react'
+import excuteQuery from '/utils/db'
+import Blogs from '/components/blogs'
 
-const index = () => {
+const index = ({data}) => {
     return (
         <div>
-            
+            <Blogs data={data}/>
         </div>
     )
 }
 
 export default index
+
+export async function getStaticProps() {
+    
+  let data = []
+
+  try {
+    const result = await excuteQuery({
+      query: 'SELECT * FROM blogdata',
+    })
+    const res = await JSON.stringify(result)
+    data = await JSON.parse(res)
+  } catch ( error ) { console.log( error );}
+
+
+  if (!data) {
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false,
+      },
+    }
+  }
+
+  return {
+    props: { data },
+  }
+}
+
 
 
 /*
