@@ -1,6 +1,10 @@
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '/styles/main.scss'
+
+import '@fortawesome/fontawesome-svg-core/styles.css';
+//import '@fortawesome/free-solid-svg-icons/styles.css';
+
 import Header from '/components/shared/Header'
 import Loader from '/components/shared/Loader';
 import Footer from '/components/shared/Footer';

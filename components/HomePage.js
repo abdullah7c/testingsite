@@ -3,6 +3,8 @@ import Image from 'next/image'
 import {Container,Row,Col,Button,Card,Form} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowCircleUp,faBars,faPaintBrush,faCartPlus,faMobileAlt,faSearchPlus,faQuoteLeft } from '@fortawesome/free-solid-svg-icons'
+
+
 import Router from 'next/router'
 // import {BlogContext} from '/context/BlogContextProvider'
 // import ReactHtmlParser from 'react-html-parser';
