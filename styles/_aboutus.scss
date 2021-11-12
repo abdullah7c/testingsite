@@ -125,14 +125,42 @@
         font-size: 40px;
         font-weight: bold;
     }
-    .value-icon{
+
+    .value-icon{        
+        position: relative;
+        left: 15px;
+        font-size: 30px;
+    }
+
+    .extra-value-icon{
+        position: relative;
+        left: 22px;
+    }
+
+    .icon-back{
         background-color: rgb(228, 177, 48);
         border-radius: 55px;
-        width: 70px;
-        height: 70px;
-        padding: 20px;
-        padding-right: 10px;
+        width: 64px;
         margin: 10px;
+    }
+    
+
+    @media screen and (max-width: 812px) {
+        .value-icon{        
+            position: relative;
+            left: 0px;
+        }
+    
+        .icon-back{
+            background-color: rgb(228, 177, 48);
+            border-radius: 55px;
+            width: 64px;
+            margin: 10px;
+            text-align: center;
+            position: relative;
+            left:150px;
+        }
+    
     }
 
 

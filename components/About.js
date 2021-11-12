@@ -121,7 +121,7 @@ return (
         <Row className="justify-content-center mx-1 my-5">
             <Col className="center-responsive" md={4}>
                 <Row>
-                    <Col md="auto" className="" ><FontAwesomeIcon className=" value-icon my-3" icon={faUserCheck}/></Col>
+                    <Col md="auto" className="" ><div className="icon-back"><FontAwesomeIcon className="value-icon my-3" icon={faUserCheck}/></div></Col>
                     <Col className="my-3" md={8} >
                         <h4 className="values-heading my-2">CLIENT SATISFACTION FIRST</h4>
                         <p>What is the best long term investment? 7CTECH believes that client satisfaction is the best form of long term investment.</p>
@@ -130,7 +130,7 @@ return (
             </Col>
             <Col className="center-responsive" md={4}>
                 <Row>
-                    <Col md="auto" className="" ><FontAwesomeIcon className=" value-icon my-3" icon={faCodeBranch}/></Col>
+                    <Col md="auto" className="" ><div className="icon-back"><FontAwesomeIcon className="value-icon extra-value-icon my-3" icon={faCodeBranch}/></div></Col>
                     <Col className="my-3" md={8} >
                         <h4 className="values-heading my-2">INNOVATION AND INTELLECT</h4>
                         <p>What is the best long term investment? 7CTECH believes that client satisfaction is the best form of long term investment.</p>
@@ -139,7 +139,7 @@ return (
             </Col>
             <Col className="center-responsive" md={4}>
                 <Row>
-                    <Col md="auto" className="" ><FontAwesomeIcon className=" value-icon my-3" icon={faListUl}/></Col>
+                    <Col md="auto" className="" ><div className="icon-back"><FontAwesomeIcon className="value-icon my-3" icon={faListUl}/></div></Col>
                     <Col className="my-3" md={8} >
                         <h4 className="values-heading my-2">CORE VALUES OF INTEGRITY</h4>
                         <p>Our professionals realize the fact that business ethics and moral values determine the goodwill of any professional organization.</p>
