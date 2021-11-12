@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import {Container,Row,Col} from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { faQuoteRight,faCheckCircle,faCodeBranch,faListUl,faUserCheck,faEnvelope } from '@fortawesome/free-solid-svg-icons'
 // import Map from './shared/Map'
 // import Hear from './shared/Hear'

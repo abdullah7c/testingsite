@@ -1,9 +1,7 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import excuteQuery from '../utils/db'
 import HomePage from '/components/HomePage'
 
-export default function Home({data}) {
+export default function Home() {
   
   return (
     <div >
@@ -13,29 +11,8 @@ export default function Home({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <HomePage data={data} />
+      <HomePage  />
       
     </div>
   )
-}
-
-export async function getStaticProps(context) {
-
-  let data = []
-
-    try {
-        const result = await excuteQuery({
-          query: 'SELECT * FROM blogdata',
-      })
-      const res = await JSON.stringify(result)
-      data = await JSON.parse(res)
-  } catch ( error ) { console.log( error );}
-
-  
-  if (!data) {
-    return { notFound: true,}
-  }
-  return {
-    props: { data }, // will be passed to the page component as props
-  }
 }
